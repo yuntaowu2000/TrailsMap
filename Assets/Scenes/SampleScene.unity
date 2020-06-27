@@ -730,7 +730,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1425512530 stripped
 GameObject:
@@ -1311,7 +1311,7 @@ Transform:
   - {fileID: 1097931080}
   - {fileID: 1102092882}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139308950 stripped
 GameObject:
@@ -1450,7 +1450,7 @@ PrefabInstance:
     - target: {fileID: 6415432091690418282, guid: 4cb75349f8de66945b0ad22bbc2e61d1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6415432091690418282, guid: 4cb75349f8de66945b0ad22bbc2e61d1,
         type: 3}
@@ -1524,7 +1524,7 @@ PrefabInstance:
     - target: {fileID: 6869479601423312485, guid: 1cfb9e59299b5bd43a76f62e75b76fb8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6869479601423312485, guid: 1cfb9e59299b5bd43a76f62e75b76fb8,
         type: 3}
@@ -1727,7 +1727,7 @@ PrefabInstance:
     - target: {fileID: 8186143365491632568, guid: f6f79c10a02464c43a3d8b4eeebde486,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8186143365491632568, guid: f6f79c10a02464c43a3d8b4eeebde486,
         type: 3}
@@ -1813,6 +1813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MapIntroCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186143365491632572, guid: f6f79c10a02464c43a3d8b4eeebde486,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f79c10a02464c43a3d8b4eeebde486, type: 3}
