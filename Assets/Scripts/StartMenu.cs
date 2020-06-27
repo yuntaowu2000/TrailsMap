@@ -9,8 +9,9 @@ public class StartMenu : MonoBehaviour
     [SerializeField] float waitTime = 3f;
     [SerializeField] CameraMovement cameraControl = null;
     
-    [SerializeField] GameObject tutorialButton;
-    [SerializeField] GameObject directStartButton;
+    [SerializeField] GameObject tutorialButton = null;
+    [SerializeField] GameObject directStartButton = null;
+    [SerializeField] GameObject Map = null;
 
     Text introText = null;
     Image backgroundImage = null;
@@ -19,6 +20,7 @@ public class StartMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Map.SetActive(false);
         cameraControl.enabled = false;
         introText = GetComponentInChildren<Text>();
         backgroundImage = GetComponentInChildren<Image>();
@@ -51,7 +53,7 @@ public class StartMenu : MonoBehaviour
         introText.text = "按住鼠标右键，并左右移动鼠标来旋转镜头";
         yield return new WaitForSeconds(waitTime);
         introText.text = "现在，开始游览西塞姆利亚大陆吧！";
-
+        Map.SetActive(true);
         cameraControl.enabled = true;
         yield return FadeOut(waitTime);
         Destroy(this.gameObject);
@@ -60,6 +62,7 @@ public class StartMenu : MonoBehaviour
     private IEnumerator DirectStartFunction()
     {
         cameraControl.enabled = true;
+        Map.SetActive(true);
         yield return FadeOut(waitTime);
         Destroy(this.gameObject);
     }

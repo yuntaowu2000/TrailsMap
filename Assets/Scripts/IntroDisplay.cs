@@ -5,7 +5,7 @@ using UnityEngine;
 public class IntroDisplay : MonoBehaviour
 {
     [SerializeField] Canvas relatedIntro = null;
-    [SerializeField] CameraMovement cameraControl = null;
+    CameraMovement cameraControl = null;
     [SerializeField] Texture2D cursorTexture = null;
 
     IntroDisplay[] allIntroDisplays = null;
@@ -14,12 +14,13 @@ public class IntroDisplay : MonoBehaviour
     private void Start()
     {
         allIntroDisplays = FindObjectsOfType<IntroDisplay>();
+        cameraControl = FindObjectOfType<CameraMovement>();
     }
 
     //called when mouse hover onto the object
     private void OnMouseOver()
     {
-        Debug.Log("Mouse entered");
+        //Debug.Log("Mouse entered");
         if (opened) return;
         if (relatedIntro == null) return;
         if (cursorTexture != null)
@@ -28,7 +29,7 @@ public class IntroDisplay : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Clicked");
+            //Debug.Log("Clicked");
             opened = true;
             cameraControl.enabled = false;
             relatedIntro.enabled = true;

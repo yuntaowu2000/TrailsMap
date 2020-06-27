@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class AudioChange : MonoBehaviour
 {
-    // Start is called before the first frame update
     string musicVersion = null;
     [SerializeField] AudioClip[] audioClip = null;
     AudioSource audioSource;
@@ -15,11 +14,6 @@ public class AudioChange : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void SetVersion() {
         //get the name of the button and set it as destination scene
         string newMusicVersion = EventSystem.current.currentSelectedGameObject.name;
@@ -27,9 +21,9 @@ public class AudioChange : MonoBehaviour
         musicVersion = newMusicVersion;
         switch (musicVersion)
         {
-            case "FC": 
+            case "Sora": 
                 audioSource.clip = audioClip[0];
-                Debug.Log("FC clicked");
+                Debug.Log("Sora clicked");
                 break;
             case "Ao":
                 audioSource.clip = audioClip[1];
