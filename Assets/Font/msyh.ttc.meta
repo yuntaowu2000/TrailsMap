@@ -11,8 +11,7 @@ TrueTypeFontImporter:
   fontName: Microsoft YaHei
   fontNames:
   - Microsoft YaHei
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 44a04c93e0f86f54286d3d4e820c8e8e, type: 3}
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
