@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7281651008029028109}
   - component: {fileID: 7281651008029028108}
   m_Layer: 5
-  m_Name: FC
+  m_Name: Sora
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -410, y: -226.5}
+  m_AnchoredPosition: {x: -355.5, y: -276}
   m_SizeDelta: {x: 89.001755, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7281651008029028082
@@ -207,7 +207,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FC
+  m_Text: Sora
 --- !u!1 &7281651008464545853
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +268,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7281651008464545827
 MonoBehaviour:
@@ -282,12 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.61
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -345,7 +345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -232, y: -226.5}
+  m_AnchoredPosition: {x: -177.5, y: -276}
   m_SizeDelta: {x: 89.001755, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7281651008738857577
@@ -633,7 +633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -321, y: -226.5}
+  m_AnchoredPosition: {x: -266.5, y: -276}
   m_SizeDelta: {x: 89.001755, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7281651009568985893

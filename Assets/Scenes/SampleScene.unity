@@ -215,6 +215,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9f54501b7960479604677451a6d1c, type: 3}
 --- !u!4 &132108809 stripped
@@ -316,6 +321,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544099, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
@@ -456,6 +466,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SaintArk
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -626,6 +641,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9f54501b7960479604677451a6d1c, type: 3}
 --- !u!4 &400504138 stripped
@@ -710,6 +730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ordis
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -805,6 +830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Levis
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -905,6 +935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Heimdallr
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -1012,6 +1047,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544099, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
@@ -1207,6 +1247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Parm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -1651,6 +1696,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544099, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
@@ -1829,6 +1879,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Legram
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9f54501b7960479604677451a6d1c, type: 3}
@@ -2068,6 +2123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Raquel
       objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -2157,12 +2217,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1425512530 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8186143365869510735, guid: f6f79c10a02464c43a3d8b4eeebde486,
-    type: 3}
-  m_PrefabInstance: {fileID: 8186143365803030372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1474673522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2245,6 +2299,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9f54501b7960479604677451a6d1c, type: 3}
 --- !u!4 &1474673523 stripped
@@ -2340,6 +2399,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544099, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
@@ -2445,6 +2509,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9f54501b7960479604677451a6d1c, type: 3}
 --- !u!4 &1649485825 stripped
@@ -2546,6 +2615,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544099, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
@@ -2573,12 +2647,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4639609474670108139, guid: aac9f54501b7960479604677451a6d1c,
     type: 3}
   m_PrefabInstance: {fileID: 1703268458}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1704522476 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8186143365324732469, guid: f6f79c10a02464c43a3d8b4eeebde486,
-    type: 3}
-  m_PrefabInstance: {fileID: 8186143365803030372}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1726633317
 GameObject:
@@ -2730,6 +2798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Nord
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -2919,6 +2992,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Celdic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -3114,6 +3192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jurai
       objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3208,6 +3291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ymir
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -3393,6 +3481,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544099, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
@@ -3502,6 +3595,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trista
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -3614,6 +3712,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9f54501b7960479604677451a6d1c, type: 3}
 --- !u!4 &2034633706 stripped
@@ -3817,6 +3920,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roer
       objectReference: {fileID: 0}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4639609475541544109, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3926,6 +4034,11 @@ PrefabInstance:
       propertyPath: cameraControl
       value: 
       objectReference: {fileID: 540553720}
+    - target: {fileID: 4639609475270105553, guid: aac9f54501b7960479604677451a6d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9f54501b7960479604677451a6d1c, type: 3}
 --- !u!1001 &6415432091449008694
@@ -4078,16 +4191,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 313320029}
-    - target: {fileID: 7281651008029028110, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
-        type: 3}
-      propertyPath: m_Name
-      value: Sora
-      objectReference: {fileID: 0}
-    - target: {fileID: 7281651008311518030, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
-        type: 3}
-      propertyPath: m_Text
-      value: Sora
-      objectReference: {fileID: 0}
     - target: {fileID: 7281651008464545825, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4193,15 +4296,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7281651008464545827, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7281651008464545853, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
         type: 3}
       propertyPath: m_Name
       value: MusicControllerCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7281651008464545853, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7281651008738857579, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
         type: 3}
@@ -4334,16 +4437,6 @@ PrefabInstance:
       objectReference: {fileID: 540553720}
     - target: {fileID: 8186143365491632569, guid: f6f79c10a02464c43a3d8b4eeebde486,
         type: 3}
-      propertyPath: tutorialButton
-      value: 
-      objectReference: {fileID: 1425512530}
-    - target: {fileID: 8186143365491632569, guid: f6f79c10a02464c43a3d8b4eeebde486,
-        type: 3}
-      propertyPath: directStartButton
-      value: 
-      objectReference: {fileID: 1704522476}
-    - target: {fileID: 8186143365491632569, guid: f6f79c10a02464c43a3d8b4eeebde486,
-        type: 3}
       propertyPath: Map
       value: 
       objectReference: {fileID: 2120581716}
@@ -4351,11 +4444,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MapIntroCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186143365491632572, guid: f6f79c10a02464c43a3d8b4eeebde486,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f79c10a02464c43a3d8b4eeebde486, type: 3}
