@@ -39,4 +39,9 @@ public class AudioChange : MonoBehaviour
         }
         audioSource.Play();
     }
+
+    public void SetSilent()
+    {
+        audioSource.Stop();
+    }
 }
