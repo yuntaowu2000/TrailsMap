@@ -32,6 +32,7 @@ public class IntroDisplay : MonoBehaviour
         {
             //Debug.Log("Clicked");
             opened = true;
+            cameraRb.angularVelocity = new Vector3(0,0,0);
             cameraRb.velocity = new Vector3(0,0,0);
             cameraControl.enabled = false;
             relatedIntro.enabled = true;
