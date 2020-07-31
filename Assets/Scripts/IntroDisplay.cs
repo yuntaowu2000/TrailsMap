@@ -7,7 +7,7 @@ public class IntroDisplay : MonoBehaviour
     [SerializeField] Canvas relatedIntro = null;
     CameraMovement cameraControl = null;
     [SerializeField] Texture2D cursorTexture = null;
-
+    Rigidbody cameraRb;
     IntroDisplay[] allIntroDisplays = null;
     bool opened = false;
 
@@ -15,6 +15,7 @@ public class IntroDisplay : MonoBehaviour
     {
         allIntroDisplays = FindObjectsOfType<IntroDisplay>();
         cameraControl = FindObjectOfType<CameraMovement>();
+        cameraRb = FindObjectOfType<CameraMovement>().GetComponent<Rigidbody>();
     }
 
     //called when mouse hover onto the object
@@ -31,6 +32,7 @@ public class IntroDisplay : MonoBehaviour
         {
             //Debug.Log("Clicked");
             opened = true;
+            cameraRb.velocity = new Vector3(0,0,0);
             cameraControl.enabled = false;
             relatedIntro.enabled = true;
             SetOtherIntroDisplay(false);
