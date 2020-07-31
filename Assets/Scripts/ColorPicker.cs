@@ -23,11 +23,11 @@ public class ColorPicker : MonoBehaviour
         foreach(Text text in texts) {
             if (text.transform.parent.name == "NameCanvas") {
                 textsInNameCanvas.Add(text);
-                Debug.Log("Name Canvas " + text.text);
+                //Debug.Log("Name Canvas " + text.text);
             }
             else if (text.transform.name == "Title") {
                 textsInTitle.Add(text);
-                Debug.Log("Title " + text.text);
+                //Debug.Log("Title " + text.text);
             }
         }
     }
@@ -47,7 +47,7 @@ public class ColorPicker : MonoBehaviour
     private void SetColorBasedOnCountry(int i) {
         foreach (Text t in textsInNameCanvas)
         {
-            Debug.Log ("Setting color for name " + t.text);
+            //Debug.Log ("Setting color for name " + t.text);
             
             
             if (countryName.Contains(t.transform.parent.transform.parent.name)) {
@@ -61,7 +61,7 @@ public class ColorPicker : MonoBehaviour
         }
         foreach (Text t in textsInTitle)
         {
-            Debug.Log ("Setting color for title " + t.text);
+            //Debug.Log ("Setting color for title " + t.text);
             t.color = colors[i];
             if (t.transform.parent.transform.parent.name == "Nord") {
                 t.color = new Color32(0x7C,0xFC,0x00, 255);

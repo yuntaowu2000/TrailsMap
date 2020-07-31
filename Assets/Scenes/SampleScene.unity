@@ -13735,7 +13735,12 @@ PrefabInstance:
     - target: {fileID: 6869479601423312490, guid: 1cfb9e59299b5bd43a76f62e75b76fb8,
         type: 3}
       propertyPath: force
-      value: 200
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869479601423312490, guid: 1cfb9e59299b5bd43a76f62e75b76fb8,
+        type: 3}
+      propertyPath: degreeForce
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6869479601579621089, guid: 1cfb9e59299b5bd43a76f62e75b76fb8,
         type: 3}
@@ -13770,7 +13775,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
-  m_AngularDrag: 3
+  m_AngularDrag: 2.5
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0

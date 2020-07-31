@@ -11,20 +11,22 @@ public class StartMenu : MonoBehaviour
     
     [SerializeField] GameObject tutorialButton = null;
     [SerializeField] GameObject directStartButton = null;
-    [SerializeField] GameObject Map = null;
 
+    IntroDisplay[] placeIntros = null;
     Text introText = null;
     Image backgroundImage = null;
     CanvasGroup canvasGroup = null;
     
+
     // Start is called before the first frame update
     void Start()
     {
-        Map.SetActive(false);
         cameraControl.enabled = false;
         introText = GetComponentInChildren<Text>();
         backgroundImage = GetComponentInChildren<Image>();
         canvasGroup = GetComponent<CanvasGroup>();
+        placeIntros = FindObjectsOfType<IntroDisplay>();
+        SetPlaceIntroActive(false);
     }
 
     public void OnTutorialStartClicked()
@@ -53,7 +55,7 @@ public class StartMenu : MonoBehaviour
         introText.text = "按住鼠标右键，并左右移动鼠标来旋转镜头";
         yield return new WaitForSeconds(waitTime);
         introText.text = "现在，开始游览西塞姆利亚大陆吧！";
-        Map.SetActive(true);
+        SetPlaceIntroActive(true);
         cameraControl.enabled = true;
         yield return FadeOut(waitTime);
         Destroy(this.gameObject);
@@ -62,7 +64,7 @@ public class StartMenu : MonoBehaviour
     private IEnumerator DirectStartFunction()
     {
         cameraControl.enabled = true;
-        Map.SetActive(true);
+        SetPlaceIntroActive(true);
         yield return FadeOut(waitTime);
         Destroy(this.gameObject);
     }
@@ -73,6 +75,12 @@ public class StartMenu : MonoBehaviour
         {
             canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 0f, Time.deltaTime / time);
             yield return null;
+        }
+    }
+
+    private void SetPlaceIntroActive(bool active) {
+        foreach (IntroDisplay p in placeIntros) {
+            p.enabled = active;
         }
     }
 }
