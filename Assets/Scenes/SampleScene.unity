@@ -1288,7 +1288,7 @@ PrefabInstance:
     - target: {fileID: 355487679376688323, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_Text
-      value: "\u65E7\u90FD\u5723\u7279\u4E9A\u514B\uFF08\u65E7\u90FD\u30BB\u30F3\u30C8\u30A2\u30FC\u30AF/Saint
+      value: "\u65E7\u90FD \u5723\u7279\u4E9A\u514B\uFF08\u65E7\u90FD\u30BB\u30F3\u30C8\u30A2\u30FC\u30AF/Saint
         Ark\uFF09"
       objectReference: {fileID: 0}
     - target: {fileID: 594530400125234820, guid: aac9f54501b7960479604677451a6d1c,
@@ -1911,7 +1911,7 @@ PrefabInstance:
     - target: {fileID: 355487679376688323, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_Text
-      value: "\u6D77\u90FD\u6B27\u5C14\u8FEA\u65AF\uFF08\u6D77\u90FD\u30AA\u30EB\u30C7\u30A3\u30B9/Ordis\uFF09"
+      value: "\u6D77\u90FD \u6B27\u5C14\u8FEA\u65AF\uFF08\u6D77\u90FD\u30AA\u30EB\u30C7\u30A3\u30B9/Ordis\uFF09"
       objectReference: {fileID: 0}
     - target: {fileID: 594530400125234820, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
@@ -4195,7 +4195,7 @@ PrefabInstance:
     - target: {fileID: 355487679376688323, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
       propertyPath: m_Text
-      value: "\u7EBA\u7EC7\u9547\u5E15\u5C14\u59C6\uFF08\u7D21\u7E3E\u753A\u30D1\u30EB\u30E0/Parm\uFF09"
+      value: "\u7EBA\u7EC7\u9547 \u5E15\u5C14\u59C6\uFF08\u7D21\u7E3E\u753A\u30D1\u30EB\u30E0/Parm\uFF09"
       objectReference: {fileID: 0}
     - target: {fileID: 594530400125234820, guid: aac9f54501b7960479604677451a6d1c,
         type: 3}
