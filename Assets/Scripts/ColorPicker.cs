@@ -16,6 +16,7 @@ public class ColorPicker : MonoBehaviour
     List<Text> textsInNameCanvas = new List<Text>();
     List<Text> textsInTitle = new List<Text>();
     private void Awake() {
+        
         countryName.Add("Liberl");
         countryName.Add("Crossbell");
         countryName.Add("Erebonia");

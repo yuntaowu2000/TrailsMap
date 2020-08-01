@@ -50,9 +50,9 @@ public class StartMenu : MonoBehaviour
     private IEnumerator TutorialFunction()
     {
        
-        introText.text = "按住鼠标左键，并移动鼠标来移动镜头位置";
+        introText.text = "按住鼠标左键/单指按住屏幕，并移动鼠标/手指来移动镜头位置";
         yield return new WaitForSeconds(waitTime);
-        introText.text = "按住鼠标右键，并左右移动鼠标来旋转镜头";
+        introText.text = "按住鼠标右键/双指按住屏幕，并左右移动鼠标/手指来旋转镜头";
         yield return new WaitForSeconds(waitTime);
         introText.text = "现在，开始游览西塞姆利亚大陆吧！";
         SetPlaceIntroActive(true);

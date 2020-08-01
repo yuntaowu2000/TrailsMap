@@ -32,8 +32,8 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveCamera();
-        RotateCamera();
+        if (RotateCamera()) return;
+        if (MoveCamera()) return;
     }
 
     private void LateUpdate() {
@@ -51,27 +51,46 @@ public class CameraMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(newRotation);
     }
     
-    private void MoveCamera()
+    private bool MoveCamera()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.touchCount == 1) {
+            //cameraRb.angularVelocity = new Vector3(0,0,0);
+            Touch t = Input.touches[0];
+            if (t.deltaTime <= Time.deltaTime) {
+                Vector3 actualForce =  transform.forward * t.deltaPosition.y * force / 5 
+                                + transform.right * t.deltaPosition.x * force / 5 ;
+                cameraRb.AddForce(actualForce);
+            }
+            return true;
+        }
+        else if (Input.GetMouseButton(0))
         {
             cameraRb.angularVelocity = new Vector3(0,0,0);
             Vector3 actualForce = - transform.forward * Input.GetAxis("Mouse Y") * force 
                                 - transform.right * Input.GetAxis("Mouse X") * force;
-            // actualForce.y = 0;
-            // Vector3 newPosition = transform.position
-            //                         - transform.forward * Input.GetAxis("Mouse Y") * speed
-            //                         - transform.right * Input.GetAxis("Mouse X") * speed;
             cameraRb.AddForce(actualForce);
+            return true;
         }
+        return false;
     }
-    private void RotateCamera()
+    private bool RotateCamera()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.touchCount == 2) {
+            cameraRb.velocity = new Vector3(0,0,0);
+            Touch t = Input.touches[0];
+            if (t.deltaTime <= Time.deltaTime)
+            {
+                cameraRb.AddTorque(transform.up * degreeForce / 2.0f * t.deltaPosition.x);
+            }
+            return true;
+        }
+        else if (Input.GetMouseButton(1))
         {
             cameraRb.velocity = new Vector3(0,0,0);
             cameraRb.AddTorque(- transform.up * degreeForce * Input.GetAxis("Mouse X"));
             //transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Mouse X") * degreeForce);
+            return true;
         }
+        return false;
     }
 }
