@@ -21,7 +21,7 @@ public class CameraMovement : MonoBehaviour
         minX = mapPosition.localPosition.x - 5.5f * mapPosition.localScale.x;
         maxX = mapPosition.localPosition.x + 5.5f * mapPosition.localScale.x;
         minZ = mapPosition.localPosition.z - 5.5f * mapPosition.localScale.z;
-        maxZ = mapPosition.localPosition.z + 5.5f * mapPosition.localScale.z;
+        maxZ = mapPosition.localPosition.z + 7.0f * mapPosition.localScale.z;
 
         height = transform.position.y;
         rotX = transform.rotation.eulerAngles.x;
