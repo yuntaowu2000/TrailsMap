@@ -50,7 +50,10 @@ public class ColorPicker : MonoBehaviour
         {
             //Debug.Log ("Setting color for name " + t.text);
             
-            
+            if (t == null)
+            {
+                continue;
+            }
             if (countryName.Contains(t.transform.parent.transform.parent.name)) {
                 t.color = new Color32(colors[i].r, colors[i].g, colors[i].b, 255);
             } else {
