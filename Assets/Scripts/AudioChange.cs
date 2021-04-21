@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 
 public class AudioChange : MonoBehaviour
 {
@@ -33,6 +34,10 @@ public class AudioChange : MonoBehaviour
                 audioSource.clip = audioClip[2];
                 Debug.Log("Sen clicked");
                 break;
+            case "test":
+                StartCoroutine(GetBGM());
+                Debug.Log("test clicked");
+                break;
             default:
                 audioSource.clip = audioClip[0];
                 break;
@@ -43,5 +48,31 @@ public class AudioChange : MonoBehaviour
     public void SetSilent()
     {
         audioSource.Stop();
+    }
+
+    private IEnumerator GetBGM() {
+        string url = "https://raw.githubusercontent.com/yuntaowu2000/trails-game-models/master/ed9999.mp3";
+        using (var uwr = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG)) {
+
+            DownloadHandlerAudioClip dlHandler = (DownloadHandlerAudioClip)uwr.downloadHandler;
+            dlHandler.streamAudio = true;
+
+            yield return uwr.SendWebRequest();
+            
+            if (uwr.isNetworkError || uwr.isHttpError) {
+                Debug.Log(uwr.error);
+                yield break;
+            }
+
+            if (dlHandler.isDone) {
+                AudioClip audioClip = dlHandler.audioClip;
+                if (audioClip != null) {
+                    audioSource.clip = DownloadHandlerAudioClip.GetContent(uwr);
+                    audioSource.Play();
+                }
+            }
+
+        }
+
     }
 }
