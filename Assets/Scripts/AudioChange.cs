@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 public class AudioChange : MonoBehaviour
 {
     string musicVersion = null;
-    [SerializeField] AudioClip[] audioClip = null;
+    string[] musicNames = {"wind_from_liberl.mp3", "116_Water_Plants_and_the_Blue_Sky.mp3", "1-21_Beyond_the_Drifting_Clouds.mp3", "ed9999.mp3"};
     AudioSource audioSource;
     void Start()
     {
@@ -23,26 +23,25 @@ public class AudioChange : MonoBehaviour
         switch (musicVersion)
         {
             case "Sora": 
-                audioSource.clip = audioClip[0];
+                StartCoroutine(GetBGM(musicNames[0]));
                 Debug.Log("Sora clicked");
                 break;
             case "Ao":
-                audioSource.clip = audioClip[1];
+                StartCoroutine(GetBGM(musicNames[1]));
                 Debug.Log("Ao clicked");
                 break;
             case "Sen":
-                audioSource.clip = audioClip[2];
+                StartCoroutine(GetBGM(musicNames[2]));
                 Debug.Log("Sen clicked");
                 break;
-            case "test":
-                StartCoroutine(GetBGM());
+            case "Akatsuki":
+                StartCoroutine(GetBGM(musicNames[3]));
                 Debug.Log("test clicked");
                 break;
             default:
-                audioSource.clip = audioClip[0];
+                StartCoroutine(GetBGM(musicNames[0]));
                 break;
         }
-        audioSource.Play();
     }
 
     public void SetSilent()
@@ -50,8 +49,10 @@ public class AudioChange : MonoBehaviour
         audioSource.Stop();
     }
 
-    private IEnumerator GetBGM() {
-        string url = "https://raw.githubusercontent.com/yuntaowu2000/trails-game-models/master/ed9999.mp3";
+    private IEnumerator GetBGM(string musicName) {
+        string url = string.Format("https://data.trails-game.com/musics/{0}", musicName);
+        Debug.Log(url);
+
         using (var uwr = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG)) {
 
             DownloadHandlerAudioClip dlHandler = (DownloadHandlerAudioClip)uwr.downloadHandler;

@@ -20,3 +20,7 @@ Developed using Unity Engine (WebGL build)
 
 [点此查看地图](https://trails-game.com/worldmap/)
 
+## Updates
+
+### 2021-04-21
+Added support for streaming mp3 to reduce build size.
