@@ -7,11 +7,11 @@ using UnityEngine.Networking;
 
 public class AudioChange : MonoBehaviour
 {
-    // string musicVersion = null;
-    // string[] musicNames = {"wind_from_liberl.mp3", "116_Water_Plants_and_the_Blue_Sky.mp3", "1-21_Beyond_the_Drifting_Clouds.mp3", "ed9999.mp3"};
     private AudioSource audioSource;
     [SerializeField] private Text BGMText = null;
     [SerializeField] private Dropdown dropdown = null;
+
+    private IEnumerator currCoroutine = null;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -32,17 +32,25 @@ public class AudioChange : MonoBehaviour
     }
 
     public void SetBGM(int dropdownValue) {
+
+        if (audioSource.isPlaying) {
+            audioSource.Stop();
+        }
+        if (currCoroutine != null) {
+            StopCoroutine(currCoroutine);
+        }
+
         if (dropdownValue == 0) {
             if (BGMText != null) {
                 BGMText.text = string.Format("BGM: None");
             }
-            if (audioSource.isPlaying) {
-                audioSource.Stop();
-            }
             audioSource.clip = null;
+            currCoroutine = null;
             return;
         }
-        StartCoroutine(GetBGM(dropdownValue));
+        
+        currCoroutine = GetBGM(dropdownValue);
+        StartCoroutine(currCoroutine);
     }
 
     private IEnumerator GetBGM(int dropdownValue) {
@@ -56,51 +64,30 @@ public class AudioChange : MonoBehaviour
 
             var operation = uwr.SendWebRequest();
 
+            // while (uwr.downloadedBytes < 102400 && !operation.isDone) {
+            //     if (uwr.isNetworkError || uwr.isHttpError) {
+            //         Debug.Log(uwr.error);
+            //         yield break;
+            //     }   
+            //     BGMText.text = string.Format("BGM: Downloading {0:0}%", uwr.downloadProgress * 100);
+            //     yield return null;
+            // }
+
             while (!operation.isDone) {
+                if (uwr.isNetworkError || uwr.isHttpError) {
+                    Debug.Log(uwr.error);
+                    yield break;
+                }
                 BGMText.text = string.Format("BGM: Downloading {0:0}%", uwr.downloadProgress * 100);
                 yield return null;
             }
             
-            if (uwr.isNetworkError || uwr.isHttpError) {
-                Debug.Log(uwr.error);
-                yield break;
-            }
-
-            audioSource.clip = DownloadHandlerAudioClip.GetContent(uwr);
-            audioSource.Play();
             if (BGMText != null) {
                 BGMText.text = string.Format("BGM: Playing");
             }
+            audioSource.clip = dlHandler.audioClip;
+            audioSource.Play();
         }
 
     }
-
-    // public void SetVersion() {
-    //     //get the name of the button and set it as destination scene
-    //     string newMusicVersion = EventSystem.current.currentSelectedGameObject.name;
-    //     if (newMusicVersion == musicVersion) return;
-    //     musicVersion = newMusicVersion;
-    //     switch (musicVersion)
-    //     {
-    //         case "Sora": 
-    //             StartCoroutine(GetBGM(musicNames[0]));
-    //             Debug.Log("Sora clicked");
-    //             break;
-    //         case "Ao":
-    //             StartCoroutine(GetBGM(musicNames[1]));
-    //             Debug.Log("Ao clicked");
-    //             break;
-    //         case "Sen":
-    //             StartCoroutine(GetBGM(musicNames[2]));
-    //             Debug.Log("Sen clicked");
-    //             break;
-    //         case "Akatsuki":
-    //             StartCoroutine(GetBGM(musicNames[3]));
-    //             Debug.Log("test clicked");
-    //             break;
-    //         default:
-    //             StartCoroutine(GetBGM(musicNames[0]));
-    //             break;
-    //     }
-    // }
 }
