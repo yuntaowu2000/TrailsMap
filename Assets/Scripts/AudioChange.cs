@@ -11,6 +11,7 @@ public class AudioChange : MonoBehaviour
     // string[] musicNames = {"wind_from_liberl.mp3", "116_Water_Plants_and_the_Blue_Sky.mp3", "1-21_Beyond_the_Drifting_Clouds.mp3", "ed9999.mp3"};
     private AudioSource audioSource;
     [SerializeField] private Text BGMText = null;
+    [SerializeField] private Dropdown dropdown = null;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -19,11 +20,14 @@ public class AudioChange : MonoBehaviour
         }
     }
 
-    public void SetSilent()
+    public void SetPause()
     {
-        audioSource.Stop();
-        if (BGMText != null) {
-            BGMText.text = string.Format("BGM: None");
+        if (audioSource.isPlaying) {
+            audioSource.Pause();
+            BGMText.text = "BGM: Paused";
+        } else if (audioSource.clip != null) {
+            audioSource.Play();
+            BGMText.text = "BGM: Playing";
         }
     }
 
@@ -35,6 +39,7 @@ public class AudioChange : MonoBehaviour
             if (audioSource.isPlaying) {
                 audioSource.Stop();
             }
+            audioSource.clip = null;
             return;
         }
         StartCoroutine(GetBGM(dropdownValue));

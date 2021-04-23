@@ -8814,6 +8814,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1374752180}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1449564908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8035573395860536925, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7281651008877972978}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0b652f32a2cc243917e4028fa0f046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1456227848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14237,6 +14249,11 @@ PrefabInstance:
       objectReference: {fileID: 1345855510}
     - target: {fileID: 6415432091690418283, guid: 4cb75349f8de66945b0ad22bbc2e61d1,
         type: 3}
+      propertyPath: dropdown
+      value: 
+      objectReference: {fileID: 1449564908}
+    - target: {fileID: 6415432091690418283, guid: 4cb75349f8de66945b0ad22bbc2e61d1,
+        type: 3}
       propertyPath: audioClip.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 1125d063e43d60247a859462ad77146c, type: 3}
@@ -14394,6 +14411,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: 710002451419039075, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u64AD\u653E/\u6682\u505C"
+      objectReference: {fileID: 0}
     - target: {fileID: 1166420795182023128, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -14417,7 +14439,7 @@ PrefabInstance:
     - target: {fileID: 1166420795182023128, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSilent
+      value: SetPause
       objectReference: {fileID: 0}
     - target: {fileID: 1166420795182023128, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
         type: 3}
@@ -14663,6 +14685,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901365916790535082, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4,
+        type: 3}
+      propertyPath: m_Name
+      value: Controller
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f8fd8e115dcd8a42ab0e439b6f13bd4, type: 3}
