@@ -7,7 +7,7 @@ public class LinkOpener : MonoBehaviour
     public void OpenWebPage()
     {
         string locationName = transform.parent.name;
-        string weblink = "'https://trails-game.com/map/" + locationName + "'";
+        string weblink = "'https://trails-game.com/region/" + locationName + "'";
         Application.ExternalEval("w=window.open("+weblink+",'_blank')");
     }
 }

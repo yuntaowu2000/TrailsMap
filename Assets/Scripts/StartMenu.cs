@@ -11,6 +11,7 @@ public class StartMenu : MonoBehaviour
     
     [SerializeField] GameObject tutorialButton = null;
     [SerializeField] GameObject directStartButton = null;
+    [SerializeField] GameObject switchCanvas = null;
 
     IntroDisplay[] placeIntros = null;
     Text introText = null;
@@ -56,6 +57,7 @@ public class StartMenu : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         introText.text = "现在，开始游览西塞姆利亚大陆吧！";
         SetPlaceIntroActive(true);
+        switchCanvas.SetActive(true);
         cameraControl.enabled = true;
         yield return FadeOut(waitTime);
         Destroy(this.gameObject);
@@ -65,6 +67,7 @@ public class StartMenu : MonoBehaviour
     {
         cameraControl.enabled = true;
         SetPlaceIntroActive(true);
+        switchCanvas.SetActive(true);
         yield return FadeOut(waitTime);
         Destroy(this.gameObject);
     }

@@ -10,7 +10,8 @@ public class ColorPicker : MonoBehaviour
     List<string> countryName = new List<string>();
     Color32[] colors = {new Color32(0x00, 0xBF, 0xFf, 255), 
                     new Color32(0xDC, 0xE9, 0xFE, 255), 
-                    new Color32(0xDC, 0x14, 0x3C, 255)};
+                    new Color32(0xDC, 0x14, 0x3C, 255),
+                    new Color32(0x00, 0xFA, 0x9A, 255)};
 
     Text[] texts = null;
     List<Text> textsInNameCanvas = new List<Text>();
@@ -28,7 +29,7 @@ public class ColorPicker : MonoBehaviour
             }
             else if (text.transform.name == "Title") {
                 textsInTitle.Add(text);
-                //Debug.Log("Title " + text.text);
+                // Debug.Log("Title " + text.text);
             }
         }
     }
@@ -42,6 +43,8 @@ public class ColorPicker : MonoBehaviour
         } else if (transform.name == "Erebonia")
         {
             SetColorBasedOnCountry(2);
+        } else if (transform.name == "Calvard") {
+            SetColorBasedOnCountry(3);
         }
     }
 
@@ -65,7 +68,7 @@ public class ColorPicker : MonoBehaviour
         }
         foreach (Text t in textsInTitle)
         {
-            //Debug.Log ("Setting color for title " + t.text);
+            // Debug.Log ("Setting color for title " + t.text);
             t.color = colors[i];
             if (t.transform.parent.transform.parent.name == "Nord") {
                 t.color = new Color32(0x7C,0xFC,0x00, 255);
