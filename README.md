@@ -24,3 +24,9 @@ Developed using Unity Engine (WebGL build)
 
 ### 2021-04-21
 Added support for streaming mp3 to reduce build size.
+
+### 2022-03-23
+Added preliminary map for Calvard
+
+### 2022-04-18
+Finished Calvard map

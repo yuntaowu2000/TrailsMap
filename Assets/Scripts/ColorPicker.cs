@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [ExecuteInEditMode]
 public class ColorPicker : MonoBehaviour
 {
-
+    [SerializeField] bool refresh = false;
     List<string> countryName = new List<string>();
     Color32[] colors = {new Color32(0x00, 0xBF, 0xFf, 255), 
                     new Color32(0xDC, 0xE9, 0xFE, 255), 
@@ -16,8 +16,29 @@ public class ColorPicker : MonoBehaviour
     Text[] texts = null;
     List<Text> textsInNameCanvas = new List<Text>();
     List<Text> textsInTitle = new List<Text>();
-    private void Awake() {
-        
+    private void Start() {
+        RefreshNameList();
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (refresh) {
+            refresh = false;
+            RefreshNameList();
+        }
+        if (transform.name == "Liberl") {
+            SetColorBasedOnCountry(0);
+        }else if (transform.name == "Crossbell") {
+            SetColorBasedOnCountry(1);
+        } else if (transform.name == "Erebonia")
+        {
+            SetColorBasedOnCountry(2);
+        } else if (transform.name == "Calvard") {
+            SetColorBasedOnCountry(3);
+        }
+    }
+
+    private void RefreshNameList() {
         countryName.Add("Liberl");
         countryName.Add("Crossbell");
         countryName.Add("Erebonia");
@@ -31,20 +52,6 @@ public class ColorPicker : MonoBehaviour
                 textsInTitle.Add(text);
                 // Debug.Log("Title " + text.text);
             }
-        }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        if (transform.name == "Liberl") {
-            SetColorBasedOnCountry(0);
-        }else if (transform.name == "Crossbell") {
-            SetColorBasedOnCountry(1);
-        } else if (transform.name == "Erebonia")
-        {
-            SetColorBasedOnCountry(2);
-        } else if (transform.name == "Calvard") {
-            SetColorBasedOnCountry(3);
         }
     }
 
