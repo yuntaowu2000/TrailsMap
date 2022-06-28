@@ -54,7 +54,7 @@ public class AudioChange : MonoBehaviour
     }
 
     private IEnumerator GetBGM(int dropdownValue) {
-        string url = string.Format("https://data.trails-game.com/musics/{0}.mp3", dropdownValue);
+        string url = string.Format("https://alioss.trails-game.com/audio/map/{0}.mp3", dropdownValue);
         Debug.Log(url);
 
         using (var uwr = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG)) {
@@ -74,7 +74,7 @@ public class AudioChange : MonoBehaviour
             // }
 
             while (!operation.isDone) {
-                if (uwr.isNetworkError || uwr.isHttpError) {
+                if (uwr.result == UnityWebRequest.Result.ConnectionError || uwr.result == UnityWebRequest.Result.ProtocolError || uwr.result == UnityWebRequest.Result.DataProcessingError) {
                     Debug.Log(uwr.error);
                     yield break;
                 }

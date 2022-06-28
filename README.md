@@ -30,3 +30,7 @@ Added preliminary map for Calvard
 
 ### 2022-04-18
 Finished Calvard map
+
+### 2022-06-28
+Update Unity version to 2022.1.6
+Migrate BGMs to alioss
