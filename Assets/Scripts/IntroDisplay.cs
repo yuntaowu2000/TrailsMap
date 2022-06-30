@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class IntroDisplay : MonoBehaviour
 {
+    private CameraMovement cameraControl = null;
+    private Rigidbody cameraRb;
+    private bool opened = false;
+    private IntroDisplay[] allIntroDisplays = null;
     [SerializeField] Canvas relatedIntro = null;
-    CameraMovement cameraControl = null;
+    
     [SerializeField] Texture2D cursorTexture = null;
-    Rigidbody cameraRb;
-    IntroDisplay[] allIntroDisplays = null;
-    bool opened = false;
 
     private void Start()
     {
         allIntroDisplays = FindObjectsOfType<IntroDisplay>();
         cameraControl = FindObjectOfType<CameraMovement>();
-        cameraRb = FindObjectOfType<CameraMovement>().GetComponent<Rigidbody>();
+        cameraRb = cameraControl.GetComponent<Rigidbody>();
     }
 
     //called when mouse hover onto the object
@@ -32,8 +33,8 @@ public class IntroDisplay : MonoBehaviour
         {
             //Debug.Log("Clicked");
             opened = true;
-            cameraRb.angularVelocity = new Vector3(0,0,0);
-            cameraRb.velocity = new Vector3(0,0,0);
+            cameraRb.angularVelocity = Vector3.zero;
+            cameraRb.velocity = Vector3.zero;
             cameraControl.enabled = false;
             relatedIntro.enabled = true;
             SetOtherIntroDisplay(false);

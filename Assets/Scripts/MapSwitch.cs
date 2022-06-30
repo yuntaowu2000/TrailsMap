@@ -5,29 +5,33 @@ using UnityEngine.UI;
 
 public class MapSwitch : MonoBehaviour
 {
-    [SerializeField] Button switchButton = null;
-    [SerializeField] Text switchButtonText = null;
-    [SerializeField] GameObject map1 = null;
-    [SerializeField] GameObject map2 = null;
+    [SerializeField] Button m_SwitchButton = null;
+    [SerializeField] Text m_SwitchButtonText = null;
+    [SerializeField] GameObject m_Map1 = null;
+    [SerializeField] GameObject m_Map2 = null;
 
-    private bool map1Enabled = true;
+    private bool m_Map1Enabled = true;
     void Start()
     {
-        switchButtonText.text = "切换至东部地图";
-        switchButton.onClick.AddListener(()=>OnSwitchClick());
+        m_SwitchButtonText.text = "切换至东部地图";
+        m_SwitchButton.onClick.AddListener(()=>OnSwitchClick());
     }
 
-    private void OnSwitchClick() {
-        if (map1Enabled) {
-            map1.SetActive(false);
-            map2.SetActive(true);
-            switchButtonText.text = "切换至西部地图";
-        } else {
-            map1.SetActive(true);
-            map2.SetActive(false);
-            switchButtonText.text = "切换至东部地图";
+    private void OnSwitchClick() 
+    {
+        if (m_Map1Enabled) 
+        {
+            m_Map1.SetActive(false);
+            m_Map2.SetActive(true);
+            m_SwitchButtonText.text = "切换至西部地图";
+        } 
+        else 
+        {
+            m_Map1.SetActive(true);
+            m_Map2.SetActive(false);
+            m_SwitchButtonText.text = "切换至东部地图";
         }
-        map1Enabled = !map1Enabled;
+        m_Map1Enabled = !m_Map1Enabled;
     }
     
 }

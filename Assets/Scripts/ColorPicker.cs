@@ -3,83 +3,77 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+#if UNITY_EDITOR
 [ExecuteInEditMode]
 public class ColorPicker : MonoBehaviour
 {
-    [SerializeField] bool refresh = false;
-    List<string> countryName = new List<string>();
-    Color32[] colors = {new Color32(0x00, 0xBF, 0xFf, 255), 
-                    new Color32(0xDC, 0xE9, 0xFE, 255), 
-                    new Color32(0xDC, 0x14, 0x3C, 255),
-                    new Color32(0x00, 0xFA, 0x9A, 255)};
-
-    Text[] texts = null;
-    List<Text> textsInNameCanvas = new List<Text>();
-    List<Text> textsInTitle = new List<Text>();
-    private void Start() {
+    private List<string> m_CountryNames = new List<string>{"Liberl", "Crossbell", "Erebonia", "Calvard"};
+    private static Dictionary<string, Color32> m_ColorMap = new Dictionary<string, Color32>
+    {
+        {"Liberl", new Color32(0x00, 0xBF, 0xFf, 255)}, 
+        {"Crossbell", new Color32(0xDC, 0xE9, 0xFE, 255)}, 
+        {"Erebonia", new Color32(0xDC, 0x14, 0x3C, 255)},
+        {"Calvard", new Color32(0x00, 0xFA, 0x9A, 255)},
+        {"Nord", new Color32(0x7C,0xFC,0x00, 255)}
+    };
+    private List<Text> m_TextsInNameCanvas = new List<Text>();
+    private List<Text> m_TextsInTitle = new List<Text>();
+    [SerializeField] bool m_ShouldRefresh = false;
+    private void Start() 
+    {
         RefreshNameList();
     }
     // Update is called once per frame
     void Update()
     {
-        if (refresh) {
-            refresh = false;
+        if (m_ShouldRefresh) 
+        {
+            m_ShouldRefresh = false;
             RefreshNameList();
         }
-        if (transform.name == "Liberl") {
-            SetColorBasedOnCountry(0);
-        }else if (transform.name == "Crossbell") {
-            SetColorBasedOnCountry(1);
-        } else if (transform.name == "Erebonia")
-        {
-            SetColorBasedOnCountry(2);
-        } else if (transform.name == "Calvard") {
-            SetColorBasedOnCountry(3);
-        }
+        SetColorBasedOnCountry(transform.name);
     }
 
-    private void RefreshNameList() {
-        countryName.Add("Liberl");
-        countryName.Add("Crossbell");
-        countryName.Add("Erebonia");
-        texts = GetComponentsInChildren<Text>();
-        foreach(Text text in texts) {
-            if (text.transform.parent.name == "NameCanvas") {
-                textsInNameCanvas.Add(text);
+    private void RefreshNameList() 
+    {
+        Text[] texts = GetComponentsInChildren<Text>();
+        foreach(Text text in texts) 
+        {
+            if (text.transform.parent.name == "NameCanvas") 
+            {
+                m_TextsInNameCanvas.Add(text);
                 //Debug.Log("Name Canvas " + text.text);
             }
-            else if (text.transform.name == "Title") {
-                textsInTitle.Add(text);
+            else if (text.transform.name == "Title") 
+            {
+                m_TextsInTitle.Add(text);
                 // Debug.Log("Title " + text.text);
             }
         }
     }
 
-    private void SetColorBasedOnCountry(int i) {
-        foreach (Text t in textsInNameCanvas)
+    private void SetColorBasedOnCountry(string country) {
+        foreach (Text t in m_TextsInNameCanvas)
         {
             //Debug.Log ("Setting color for name " + t.text);
-            
+            string locationName = t.transform.parent.transform.parent.name;
             if (t == null)
-            {
                 continue;
-            }
-            if (countryName.Contains(t.transform.parent.transform.parent.name)) {
-                t.color = new Color32(colors[i].r, colors[i].g, colors[i].b, 255);
-            } else {
-                t.color = new Color32(colors[i].r, colors[i].g, colors[i].b, 200);
-            }
-            if (t.transform.parent.transform.parent.name == "Nord") {
-                t.color = new Color32(0x7C,0xFC,0x00, 255);
-            }
+            t.color = m_ColorMap[country];
+            if (!m_CountryNames.Contains(locationName))
+                t.color = new Color32(m_ColorMap[country].r, m_ColorMap[country].g, m_ColorMap[country].b, 200);
+            if (locationName == "Nord")
+                t.color = m_ColorMap[locationName];
         }
-        foreach (Text t in textsInTitle)
+        foreach (Text t in m_TextsInTitle)
         {
             // Debug.Log ("Setting color for title " + t.text);
-            t.color = colors[i];
-            if (t.transform.parent.transform.parent.name == "Nord") {
-                t.color = new Color32(0x7C,0xFC,0x00, 255);
-            }
+            string locationName = t.transform.parent.transform.parent.name;
+            if (locationName == "Nord")
+                t.color = m_ColorMap[locationName];
+            else
+                t.color = m_ColorMap[country];
         }
     }
 }
+#endif

@@ -1,13 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Runtime.InteropServices;
 
 public class LinkOpener : MonoBehaviour
 {
-    public void OpenWebPage()
+    [DllImport("__Internal")]
+    private static extern void OpenWebPage(string link);
+
+    private string m_WebLink;
+
+    private void Start()
     {
         string locationName = transform.parent.name;
-        string weblink = "'https://trails-game.com/region/" + locationName + "'";
-        Application.ExternalEval("w=window.open("+weblink+",'_blank')");
+        m_WebLink = "https://trails-game.com/region/" + locationName;
+    }
+
+    public void OpenWebPage()
+    {
+#if UNITY_EDITOR
+        Debug.Log($"trying to open {m_WebLink}");
+#else
+        OpenWebPage(m_WebLink);
+#endif
     }
 }

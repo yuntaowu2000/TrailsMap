@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class CameraFacing : MonoBehaviour
 {
+    private Transform m_MainCameraTransform;
+    void Start()
+    {
+        m_MainCameraTransform = Camera.main.transform;
+    }
     void LateUpdate()
     {
-        transform.forward = Camera.main.transform.forward;
+        transform.forward = m_MainCameraTransform.forward;
     }
 }
